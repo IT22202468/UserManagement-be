@@ -8,6 +8,7 @@ import connectDB from './config/db.js';
 
 // Routes
 import lecturerRoutes from './routes/lecturerRoutes.js';
+import instructorRoutes from './routes/instructorRoutes.js';
 
 dotenv.config();
 connectDB();
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 app.use('/api/lecturers', lecturerRoutes);
+app.use('/api/instructors', instructorRoutes);
 
 // Define routes and middleware
 app.listen(PORT, () => {
